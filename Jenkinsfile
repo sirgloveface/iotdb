@@ -13,8 +13,8 @@ pipeline {
            steps {
             echo "Init"
             // Send build started notifications
-            slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' branch:(${env.GIT_BRANCH}) - url:(${env.BUILD_URL})")
-            //echo "BUILD_URL=${env.BUILD_URL}"
+            // slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' branch:(${env.GIT_BRANCH}) - url:(${env.BUILD_URL})")
+            // echo "BUILD_URL=${env.BUILD_URL}"
            }
         }
 
@@ -64,7 +64,7 @@ pipeline {
            success{
              echo "Exito Build"
             // Send build end build notifications
-            slackSend (color: '#FFFF00', message: "DONE SUCCESS:  Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' branch:(${env.GIT_BRANCH}) - url:(${env.BUILD_URL})" )
+            // slackSend (color: '#FFFF00', message: "DONE SUCCESS:  Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' branch:(${env.GIT_BRANCH}) - url:(${env.BUILD_URL})" )
            }
            always {
                echo "Exito always" 
@@ -72,7 +72,7 @@ pipeline {
            failure {
            // mail to:"me@example.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
            // Send failure notification
-            slackSend (color: '#FFFF00', message: "FAIL:  Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' branch:(${env.GIT_BRANCH}) - url:(${env.BUILD_URL})" )
+           // slackSend (color: '#FFFF00', message: "FAIL:  Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' branch:(${env.GIT_BRANCH}) - url:(${env.BUILD_URL})" )
            }
           }
         }
