@@ -8,7 +8,6 @@ services:
       -  /var/run/docker.sock:/tmp/docker.sock
     environment:
       - NODE_ENV=development
-      - DB_HOST=dev
       - DB_NAME=home
       - DB_USER=postgres
       - DB_PASS=tony1983

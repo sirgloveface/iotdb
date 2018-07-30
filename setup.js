@@ -22,10 +22,10 @@ async function setup () {
   //   }
   // }
   const config = {
-    database: process.env.DB_NAME || 'platzi',
+    database: process.env.DB_NAME || 'home',
     username: process.env.DB_USER || 'postgres',
-    password: process.env.DB_PASS || '12345678',
-    host: process.env.DB_HOST || 'localhost',
+    password: process.env.DB_PASS || 'tony1983',
+    host: process.env.DB_HOST || '35.192.213.253',
     dialect: 'postgres',
     logging: s => debug(s),
     setup: true

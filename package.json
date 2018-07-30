@@ -5,8 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=platzi:* nyc --reporter=lcov ava test/  --verbose",
-    "setup": "DEBUG=platzi:* node setup.js",
+    "test": "DEBUG=home:* nyc --reporter=lcov ava test/  --verbose",
+    "setup": "DEBUG=home:* node setup.js",
     "lint": "standard"
   },
   "author": "Tony Garcia <sir.gloveface@gmail.com>",
