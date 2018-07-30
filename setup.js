@@ -9,20 +9,20 @@ const args = minimist(process.argv)
 const prompt = inquirer.createPromptModule()
 
 async function setup () {
-  if (!args.yes) {
-    const answer = await prompt([
-      {
-        type: 'confirm',
-        name: 'setup',
-        message: 'this will destroy your database, are you sure?'
-      }
-    ])
-    if (!answer.setup) {
-      return console.log('Nothing happened :)')
-    }
-  }
+  // if (!args.yes) {
+  //   const answer = await prompt([
+  //     {
+  //       type: 'confirm',
+  //       name: 'setup',
+  //       message: 'this will destroy your database, are you sure?'
+  //     }
+  //   ])
+  //   if (!answer.setup) {
+  //     return console.log('Nothing happened :)')
+  //   }
+  // }
   const config = {
-    database: process.env.DB_NAME || 'home',
+    database: process.env.DB_NAME || 'platzi',
     username: process.env.DB_USER || 'postgres',
     password: process.env.DB_PASS || '12345678',
     host: process.env.DB_HOST || 'localhost',

@@ -6,4 +6,11 @@ services:
     restart: always
     volumes:
       -  /var/run/docker.sock:/tmp/docker.sock
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=dev
+      - DB_NAME=home
+      - DB_USER=postgres
+      - DB_PASS=tony1983
+      - DB_HOST=35.192.213.253
     container_name: iot_db_service
