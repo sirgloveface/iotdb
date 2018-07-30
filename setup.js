@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('platzi:db:setup')
+const debug = require('debug')('home:db:setup')
 const inquirer = require('inquirer')
 const chalk = require('chalk')
 const minimist = require('minimist')
@@ -22,7 +22,7 @@ async function setup () {
     }
   }
   const config = {
-    database: process.env.DB_NAME || 'platzi',
+    database: process.env.DB_NAME || 'home',
     username: process.env.DB_USER || 'postgres',
     password: process.env.DB_PASS || '12345678',
     host: process.env.DB_HOST || 'localhost',
