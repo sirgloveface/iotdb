@@ -70,6 +70,7 @@ pipeline {
                echo "Exito always" 
            }
            failure {
+              echo "Fail" 
            // mail to:"me@example.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
            // Send failure notification
             //slackSend (color: '#FFFF00', message: "FAIL:  Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' branch:(${env.GIT_BRANCH}) - url:(${env.BUILD_URL})" )
