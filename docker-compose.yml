@@ -1,0 +1,9 @@
+version: '3'
+services:
+  iot_db_service:
+    build: .
+    network_mode: "host"
+    restart: always
+    volumes:
+      -  /var/run/docker.sock:/tmp/docker.sock
+    container_name: iot_db_service

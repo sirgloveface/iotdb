@@ -1,0 +1,11 @@
+#docker-compose.test.yml (Extended config for TEST env.)
+version: '3'
+services:
+  service_validator_tcoo:
+    command: npm run start-test
+    environment:
+      - NODE_ENV=test
+      - PROFILE_ACTIVE=test
+      - ENDPOINT_SPRING_CLOUD_SERVER=http://172.21.1.73:8888
+    volumes:
+      - /opt/medios_de_pago/logs:/opt/medios_de_pago/logs

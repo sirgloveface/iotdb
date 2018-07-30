@@ -1,0 +1,13 @@
+.git
+Dockerfile
+.DS_Store
+.gitignore
+README.md
+docker-compose.yml
+docker-compose.test.yml
+docker-compose.dev.yml
+docker-compose.prod.yml
+Jenkinsfile
+.idea/*
+node_modules/*
+package-lock.json

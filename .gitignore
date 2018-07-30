@@ -1,0 +1,9 @@
+.directory
+.vscode/
+node_modules
+.idea/
+src/logs
+jenkins/
+package-lock.json
+dist
+.nyc_output/
